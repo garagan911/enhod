@@ -1,0 +1,27 @@
+
+windmill.png
+size: 920,294
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+windmill_002
+  rotate: true
+  xy: 2, 138
+  size: 154, 596
+  orig: 154, 596
+  offset: 0, 0
+  index: -1
+windmill_22
+  rotate: true
+  xy: 600, 2
+  size: 290, 318
+  orig: 290, 318
+  offset: 0, 0
+  index: -1
+windmill_222
+  rotate: false
+  xy: 2, 104
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1

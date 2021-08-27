@@ -1,0 +1,98 @@
+{
+  "skeleton": {
+    "hash": "8gsTcxKlkz21c2UJJRwMYdAUKNA",
+    "spine": "3.7.94",
+    "width": 250,
+    "height": 701.67
+  },
+  "bones": [
+    {
+      "name": "root"
+    },
+    {
+      "name": "windmill_root",
+      "parent": "root",
+      "x": 142,
+      "y": -324
+    },
+    {
+      "name": "bone6",
+      "parent": "windmill_root",
+      "x": 8,
+      "y": 163,
+      "scaleX": 0.8,
+      "shearX": 20
+    },
+    {
+      "name": "bone5",
+      "parent": "bone6",
+      "length": 122.68
+    }
+  ],
+  "slots": [
+    {
+      "name": "windmill_002",
+      "bone": "windmill_root",
+      "attachment": "windmill_002"
+    },
+    {
+      "name": "windmill_22",
+      "bone": "bone5",
+      "attachment": "windmill_22"
+    },
+    {
+      "name": "windmill_222",
+      "bone": "windmill_root",
+      "attachment": "windmill_222"
+    }
+  ],
+  "skins": {
+    "default": {
+      "windmill_002": {
+        "windmill_002": {
+          "x": -56,
+          "y": -42,
+          "width": 154,
+          "height": 596
+        }
+      },
+      "windmill_22": {
+        "windmill_22": {
+          "width": 290,
+          "height": 318
+        }
+      },
+      "windmill_222": {
+        "windmill_222": {
+          "x": 10,
+          "y": 162,
+          "rotation": -63.79,
+          "width": 32,
+          "height": 32
+        }
+      }
+    }
+  },
+  "animations": {
+    "idle": {
+      "bones": {
+        "bone5": {
+          "rotate": [
+            {
+              "time": 0,
+              "angle": 0
+            },
+            {
+              "time": 0.6667,
+              "angle": 180
+            },
+            {
+              "time": 1.3333,
+              "angle": 0
+            }
+          ]
+        }
+      }
+    }
+  }
+}

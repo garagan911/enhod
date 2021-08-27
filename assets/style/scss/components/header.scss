@@ -1,0 +1,160 @@
+.site-header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 1;
+  &:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 326px;
+    height: 206px;
+    background: url("/wp-content/themes/glera/assets/images/about/logo-border.svg") no-repeat;
+    content: '';
+    z-index: -1;
+  }
+  .logo{
+    width: 100%;
+    min-width: 193px;
+  }
+}
+.main-navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-menu-1-container{
+  ul{
+    padding-left: 20px;
+    li.menu-item{
+      margin-left: 51px;
+      @include respond(laptop_1050) {
+        margin-left: 20px;
+      }
+      a{
+        @include headerNav;
+        &:before{
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          display: block;
+          width: 0;
+          height: 2px;
+          background: #0a4b78;
+          transition: .3s;
+
+        }
+        &:hover{
+          &:before{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+.site-header{
+  display: flex;
+  align-items: center;
+  padding: 20px 33px;
+}
+.social-links{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 8px;
+  grid-row-gap: 0;
+  max-width: 200px;
+  .link{
+    display: block;
+    border-radius: 50%;
+    transition: .3s;
+    box-shadow: -4px 10px 20px rgba(115, 83, 83, 0.09);
+    &:hover{
+      transform: scale(1.1);
+    }
+    &.linkedin{
+      width: 44px;
+      height: 44px;
+      background: #FFFFFF url("/wp-content/themes/glera/assets/images/social-sprite.svg") 53% 9px no-repeat;
+    }
+    &.facebook{
+      width: 44px;
+      height: 44px;
+      background: #FFFFFF url("/wp-content/themes/glera/assets/images/social-sprite.svg") 50% -34px no-repeat;
+    }
+    &.instagram{
+      width: 44px;
+      height: 44px;
+      background: #FFFFFF url("/wp-content/themes/glera/assets/images/social-sprite.svg") 53% -81px no-repeat;
+    }
+    &.vk{
+      width: 44px;
+      height: 44px;
+      background: #FFFFFF url("/wp-content/themes/glera/assets/images/social-sprite.svg") 52.28% -128px no-repeat;
+    }
+  }
+}
+@media screen and (max-width: 1920px){
+
+}
+
+@media screen and (min-width: 1025px) {
+  .glera__menu-toggle {
+    display: none;
+  }
+  .main-navigation{
+    display: flex;
+  }
+  .site-header{
+    .logo{
+      img{
+        width: 100%;
+        min-width: 193px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px){
+  .glera__menu-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: -4px 10px 20px rgba(115, 83, 83, 0.09);
+    padding: 0;
+  }
+  .site-branding, .glera__menu-toggle{
+    z-index: 7;
+  }
+  .home-top-banner{
+    background: transparent;
+  }
+  .main-navigation{
+    display: none;
+    .bg-mog{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      max-width: 70%;
+      max-height: 70%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .site-header{
+    justify-content: space-between;
+  }
+  .site-branding{
+    img{
+      max-width: 130px;
+    }
+  }
+}

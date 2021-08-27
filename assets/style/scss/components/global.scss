@@ -1,0 +1,293 @@
+body{
+  @include body-font-settings;
+
+}
+
+p{
+  @include global-font-size;
+  margin: 0;
+}
+h1, h2, h3, h4{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+h2{
+  font-weight: 900;
+  font-style: italic;
+  font-size: 64px;
+  line-height: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #31496B;
+  @include respond(tablet_992) {
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  @include respond(tablet_768) {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+a{
+  text-decoration: none;
+}
+section{
+  position: relative;
+}
+a.btn{
+  position: relative;
+  display: inline-block;
+  padding: 22px 42px;
+  background: #F74C47;
+  box-shadow: 1px 4px 0 #CC3732;
+  border-radius: 82px 82px 82px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 27px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  transition: .2s;
+  @include respond(tablet_992) {
+    font-size: 18px;
+    line-height: 25px;
+    padding: 21px 41px;
+    margin-top: 18px;
+  }
+
+  &:before, &:after{
+    content: "";
+    display: block;
+    position: absolute;
+    transition: .2s;
+  }
+  &:after{
+    //width: 68px;
+    //height: 60px;
+    width: 33px;
+    height: 43px;
+    background: url("/wp-content/themes/glera/assets/images/after-btn-line.svg") no-repeat;
+    //right: -60px;
+    //top: -25px;
+    right: -46px;
+    top: -12px;
+    @include respond(tablet_992) {
+      width: 21px;
+      height: 23px;
+      background-size: contain;
+      right: -25px;
+      top: 0;
+    }
+  }
+  &:before{
+    //width: 61px;
+    //height: 75px;
+    width: 55px;
+    height: 61px;
+    background: url("/wp-content/themes/glera/assets/images/before-btn-line.svg") no-repeat;
+    //left: -42px;
+    //bottom: -50px;
+    left: -50px;
+    bottom: -57px;
+    @include respond(tablet_992) {
+      width: 41px;
+      height: 46px;
+      background-size: contain;
+      left: -28px;
+      bottom: -39px;
+    }
+  }
+  &-red{
+    &:after{
+      right: -46px;
+      top: 15px;
+      background: url("/wp-content/themes/glera/assets/images/after-btn-line_red.svg") no-repeat;
+    }
+    &:before{
+      width: 37px;
+      height: 61px;
+      background: url("/wp-content/themes/glera/assets/images/before-btn-line_red.svg") no-repeat;
+      left: -53px;
+      bottom: -6px;
+    }
+  }
+  &:hover{
+    transform: translateY(-5px);
+    box-shadow: 1px 9px 0 #CC3732;
+    &:before, &:after{
+      transform: scale(1.2);
+    }
+  }
+}
+.title-gaegu{
+  font-family: 'Gaegu', cursive;
+  font-weight: 700;
+}
+
+.position{
+  &-absolute{
+    position: absolute;
+  }
+  &-relative{
+    position: relative;
+  }
+}
+.w{
+  &-100{
+    width: 100%;
+  }
+}
+.opacity-0{
+  opacity: 0;
+}
+.max-width{
+  max-width: 100%;
+}
+.d{
+  &-inline{
+    display: inline;
+    &-block{
+      display: inline-block;
+    }
+  }
+  &-block{
+    display: block;
+  }
+  &-flex{
+    display: flex;
+  }
+}
+.preloader{
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 100;
+}
+.container, .container-fluid{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.container{
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bg-text{
+  border-radius: 13px;
+  color: #fff;
+  padding: 0 8px 0 4px;
+}
+.text{
+  &-red{
+    color: #F74C47;
+  }
+  &-blue{
+    color: #B7D6EA;
+  }
+  &-orange{
+    color: #FFA654;
+  }
+  &-green{
+    color: #AAE6C5;
+  }
+  &-light-blue{
+    color: #B7D6EA;
+  }
+  &-violet{
+    color: #927DE7;
+  }
+  &-orange-light{
+    color: #F6C2A2;
+  }
+  &-center{
+    text-align: center;
+  }
+  &-left{
+    text-align: left;
+  }
+  &-right{
+    text-align: right;
+  }
+}
+
+.btn-coming-soon{
+  border-radius: 82px 82px 82px 0;
+  padding: 13px 26px;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #fff !important;
+  text-decoration: none;
+  transition: .3s;
+  &:hover{
+    transform: translateY(-5px);
+  }
+}
+.bg-yellow{
+  background: #FFC43A;
+}
+.btn-slide{
+  width: 44px;
+  height: 44px;
+  background: #F74C47 url("/wp-content/themes/glera/assets/images/arrows.svg") no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  transition: .3s;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+.slide{
+  &-next{
+    background-position: 16px 14px;
+    order: -1;
+    left: -130px;
+  }
+  &-prev{
+    background-position: -35px 14px;
+    right: -130px;
+  }
+}
+.site{
+  overflow: hidden;
+}
+.post, .page{
+  margin: 0;
+}
+.overflow-hidden{
+  overflow: hidden;
+}
+.mob-none{
+  display: block;
+}
+.mob-show{
+  display: none;
+}
+
+@media screen and (min-width:1921px ){
+  .container{
+    max-width: 1400px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mob-none{
+    display: none;
+  }
+  .mob-show{
+    display: block;
+  }
+}

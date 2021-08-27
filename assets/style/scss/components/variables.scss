@@ -1,0 +1,104 @@
+//Font Family
+@mixin body-font-settings{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+@mixin global-font-size{
+  font-size: 18px;
+  color: #6F7883;
+  @include respond(laptop_1050) {
+    font-size: 16px;
+  }
+}
+
+// Header
+
+$colorHeader: #31496B;
+
+@mixin headerNav{
+  font-family: 'Montserrat', sans-serif;
+  color: $colorHeader;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+// Header END
+
+// Home page
+
+@mixin home-title{
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 100px;
+  font-size: 120px;
+  letter-spacing: 2.50232px;
+  @include respond(tablet_1024) {
+    font-size: 90px;
+    line-height: 90px;
+  }
+  @include respond(tablet_992) {
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+
+$widthVideoBlockDesktop: 633px;
+$widthVideoBlockLaptop: 500px;
+$widthVideoBlockTablet: 333px;
+
+@mixin respond ($breakpoint) {
+
+  // $breakpoint is simply a variable that can have several values
+
+  @if $breakpoint==desktop {
+
+    // here `desktop` is the value of $breakpoint
+    // when call laptop, we mean the following piece of code
+
+    @media only screen and (min-width: 1501px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==desktopMin {
+    @media only screen and (max-width: 1500.98px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==laptop_1280 {
+    @media only screen and (max-width: 1280.98px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==laptop_1050 {
+    @media only screen and (max-width: 1050.98px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tablet_1024 {
+    @media only screen and (max-width: 1023.98px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tablet_992 {
+    @media only screen and (max-width: 991.98px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tablet_768 {
+    @media only screen and (max-width: 767.98px) {
+      @content;
+    }
+  }
+}
+
+// Home page END
